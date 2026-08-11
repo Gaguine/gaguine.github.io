@@ -1,10 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NLP, machine learning projects." />
+  <title>Gaguine Projets</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my first web page.</p>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <!--make dot leaky--> 
+        <span class="brand-dot"></span>
+        Gaguine
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <!--specifically why do I need target=_blank--> 
+        <a href="https://github.com/Gaguine" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">NLP · Machine Learning · Python</div>
+        <h1>Turning language <br>into data</h1>
+        <p class="hero-copy">
+          I build <strong>NLP tools, APIs</strong> for semantic analysis and text classification.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View projects ↓</a>
+          <a class="btn btn-secondary" href="https://github.com/Gaguine" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/158483267?v=4" alt="Gaguine GitHub avatar" />
+        <div class="terminal">
+          <div><span class="green">$</span> whoami</div>
+          <div>Gaguine</div><br/>
+          <div><span class="green">$</span> focus</div>
+          <div>NLP · Transformers · APIs</div><br/>
+          <div><span class="green">$</span> current_project</div>
+          <div>PsychoClass</div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Selected work</div>
+            <h2>Projects</h2>
+          </div>
+          <p>Research-driven language technology projects, moving from analysis scripts toward deployable ML services.</p>
+        </div>
+
+        <article class="featured">
+          <div>
+            <div class="project-kicker">Featured project</div>
+            <h3>PsychoClass</h3>
+            <p>
+              A FastAPI REST service that serves a fine-tuned BERT classifier for English text.
+              The API handles inference, model management, prediction history, confidence reporting
+              and user feedback through a local persistence layer.
+            </p>
+
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">BERT</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">SQLAlchemy</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Hugging Face</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://github.com/Gaguine/mental-state-classifier" target="_blank" rel="noreferrer">View repository ↗</a>
+            </div>
+          </div>
+
+          <div class="architecture">
+            <div class="flow">
+              <div class="flow-row">
+                <div class="node">Client</div>
+                <div class="arrow">→</div>
+                <div class="node">FastAPI</div>
+              </div>
+              <div class="flow-row">
+                <div class="node">REST request</div>
+                <div class="arrow">→</div>
+                <div class="node">BERT classifier</div>
+              </div>
+              <div class="flow-row">
+                <div class="node">SQLite logs</div>
+                <div class="arrow">←</div>
+                <div class="node">Prediction + confidence</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="cards">
+          <a class="card" href="https://github.com/Gaguine/Speech_Enjoyer" target="_blank" rel="noreferrer">
+            <div class="project-kicker">NLP analysis</div>
+            <h3>Speech Enjoyer</h3>
+            <p>
+              A command-line workflow for analysing speeches and visualising emotion,
+              sentiment and semantic information with transformer-based models.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">CLI</span>
+              <span class="tag">DistilRoBERTa</span>
+              <span class="tag">NER</span>
+              <span class="tag">Matplotlib</span>
+            </div>
+            <div class="link">Open on GitHub ↗</div>
+          </a>
+
+          <a class="card" href="https://github.com/Gaguine/Telegram_News_SemAnalysis" target="_blank" rel="noreferrer">
+            <div class="project-kicker">Semantic analysis</div>
+            <h3>Telegram News SemAnalysis</h3>
+            <p>
+              An earlier NLP project focused on extracting and analysing Telegram news text,
+              with classification and visualisation as part of the analysis pipeline.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Telegram data</span>
+              <span class="tag">Sentiment</span>
+              <span class="tag">Semantic analysis</span>
+            </div>
+            <div class="link">Open on GitHub ↗</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Toolkit</div>
+            <h2>Stack</h2>
+          </div>
+          <p>A compact stack centered on applied NLP, transformer inference and Python backend development.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-label">Core technologies</div>
+          <div class="skills-list">
+            <span class="skill">Python</span>
+            <span class="skill">FastAPI</span>
+            <span class="skill">PyTorch</span>
+            <span class="skill">Transformers</span>
+            <span class="skill">Hugging Face</span>
+            <span class="skill">BERT</span>
+            <span class="skill">SQLAlchemy</span>
+            <span class="skill">SQLite</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Matplotlib</span>
+            <span class="skill">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 Gaguine</span>
+      <span>Built for GitHub Pages</span>
+    </div>
+  </footer>
 </body>
 </html>
