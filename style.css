@@ -1,14 +1,10 @@
 :root {
   --bg: #202725;
-  /* panel isn't used as much in this current version */
-  --panel: #2b3936; 
-
   --text: #ffffff;
   --muted: #aebbb5;
 
   --teal: #25cf87;
   --teal-dark: #366664;
-
   --gold: #cf9e2c;
 
   --line: rgba(241, 234, 215, 0.1);
@@ -50,31 +46,26 @@ body {
       rgba(37, 207, 135, 0.12),
       transparent 30rem
     ),
-
     radial-gradient(
       ellipse at 88% 18%,
       rgba(207, 158, 44, 0.10),
       transparent 26rem
     ),
-
     radial-gradient(
       ellipse at 30% 55%,
       rgba(40, 165, 141, 0.08),
       transparent 34rem
     ),
-
     radial-gradient(
       ellipse at 78% 72%,
       rgba(207, 158, 44, 0.07),
       transparent 30rem
     ),
-
     radial-gradient(
       ellipse at 45% 95%,
       rgba(37, 207, 135, 0.06),
       transparent 32rem
     ),
-
     var(--bg);
 }
 
@@ -115,6 +106,7 @@ nav {
 .brand {
   display: flex;
   align-items: center;
+
   gap: 10px;
 
   font-weight: 800;
@@ -131,9 +123,11 @@ nav {
 
 .nav-links {
   display: flex;
+
   gap: 24px;
 
   color: var(--muted);
+
   font-size: 14px;
 }
 
@@ -147,14 +141,14 @@ nav {
    ========================= */
 
 .hero {
-
   display: grid;
+
   grid-template-columns: 1.25fr 0.75fr;
   align-items: center;
 
   gap: 60px;
 
-  padding: 25px 0 25px;
+  padding: 25px 0;
 }
 
 .eyebrow {
@@ -166,6 +160,7 @@ nav {
   font-weight: 800;
 
   letter-spacing: 0.16em;
+
   text-transform: uppercase;
 }
 
@@ -180,6 +175,7 @@ h1 {
 
 .hero-copy {
   max-width: 720px;
+
   margin-top: 26px;
 
   color: var(--muted);
@@ -191,24 +187,6 @@ h1 {
   color: var(--gold);
 }
 
-.project-logo {
-  width: 110px;
-  height: 110px;
-
-  margin: 12px 0 18px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(37, 207, 135, 0.25);
-  
-}
-
-.featured-logo {
-  width: 150px;
-  height: 150px;
-}
 
 /* =========================
    BUTTONS
@@ -299,17 +277,16 @@ h1 {
 .avatar {
   position: absolute;
 
-  width: 112px;
-  height: 112px;
-
   top: 30px;
   left: 30px;
 
+  width: 112px;
+  height: 112px;
+
   object-fit: cover;
 
-  border-radius: 20px;
-
   border: 1px solid rgba(207, 158, 44, 0.3);
+  border-radius: 20px;
 }
 
 .terminal {
@@ -348,8 +325,8 @@ section {
 
 .section-head {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
 
   gap: 24px;
 
@@ -367,9 +344,46 @@ section {
 
 .section-head p {
   max-width: 420px;
+
   margin: 0;
 
   color: var(--muted);
+}
+
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+.project-kicker {
+  color: var(--gold);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+}
+
+.project-title-row h3 {
+  margin: 0;
+}
+
+.project-logo {
+  flex-shrink: 0;
+  margin-left: auto;
+  
+  object-fit: cover;
+
+  border-radius: 50%;
 }
 
 
@@ -391,44 +405,26 @@ section {
     );
 }
 
-.project-kicker {
-  color: var(--gold);
-
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.featured .project-title-row {
+  margin: 10px 0 14px;
 }
 
-.featured h3 {
-  margin: 10px 0 14px;
-
+.featured .project-title-row h3 {
   font-size: clamp(32px, 5vw, 56px);
 
   line-height: 1;
   letter-spacing: -0.045em;
 }
 
-.featured p,
-.card p {
-  color: var(--muted);
+.featured .project-logo {
+  width: 200px;
+  height: 200px;
 }
 
 .featured p {
   max-width: 760px;
-}
-.featured .project-logo {
-  position: relative;
 
-  top: 52px;
-  right: 36px;
-
-  width: 85px;
-  height: 85px;
-
-  object-fit: cover;
-  border-radius: 50%;
+  color: var(--muted);
 }
 
 
@@ -485,20 +481,15 @@ section {
   margin-top: 18px;
 }
 
-
 .card {
-  position: relative; /* important */
-
   min-height: 280px;
 
   display: flex;
-
   flex-direction: column;
 
   padding: 28px;
 
   border: 1px solid var(--line);
-
   border-radius: 20px;
 
   background: rgba(54, 102, 100, 0.15);
@@ -508,43 +499,33 @@ section {
     border-color 0.2s ease;
 }
 
-
 .card:hover {
   background: rgba(54, 102, 100, 0.25);
 
   border-color: rgba(207, 158, 44, 0.35);
 }
 
-
-.card h3 {
+.card .project-title-row {
   margin: 12px 0 8px;
+}
 
+.card .project-title-row h3 {
   font-size: 26px;
 
+  line-height: 1.15;
   letter-spacing: -0.025em;
-
-  /*
-     Leave room for the logo so long titles
-     don't run underneath it.
-  */
-  padding-right: 90px;
 }
 
-
-.project-logo {
-  position: absolute;
-
-  top: 48px;
-  right: 28px;
-
-  width: 65px;
-  height: 65px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
+.card .project-logo {
+  width: 110px;
+  height: 110px;
 }
 
+.card p {
+  margin-top: 18px;
+
+  color: var(--muted);
+}
 
 .card .link {
   margin-top: auto;
@@ -554,7 +535,6 @@ section {
   color: var(--gold);
 
   font-size: 14px;
-
   font-weight: 700;
 }
 
@@ -565,6 +545,7 @@ section {
 
 .skills-grid {
   display: grid;
+
   grid-template-columns: 1fr 2fr;
 
   gap: 30px;
@@ -581,6 +562,7 @@ section {
   font-weight: 800;
 
   letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
 
@@ -601,8 +583,8 @@ footer {
 
 .footer-row {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   gap: 20px;
 }
@@ -640,5 +622,15 @@ footer {
   .section-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .featured .project-logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .card .project-logo {
+    width: 62px;
+    height: 62px;
   }
 }
